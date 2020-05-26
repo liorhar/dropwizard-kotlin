@@ -15,6 +15,7 @@ import io.dropwizard.configuration.SubstitutingSourceProvider
 import io.dropwizard.setup.Bootstrap
 import io.dropwizard.setup.Environment
 import org.eclipse.jetty.server.session.SessionHandler
+import ru.vyarus.dropwizard.guice.GuiceBundle
 
 class App : Application<AppConfig>() {
 
@@ -22,6 +23,9 @@ class App : Application<AppConfig>() {
         super.initialize(bootstrap)
         configureObjectMapper(bootstrap)
         bootstrap.configurationSourceProvider = SubstitutingSourceProvider(ResourceConfigurationSourceProvider(), EnvironmentVariableSubstitutor(false))
+        bootstrap.addBundle(GuiceBundle.builder()
+                .enableAutoConfig(javaClass.getPackage().name)
+                .build())
 
     }
 

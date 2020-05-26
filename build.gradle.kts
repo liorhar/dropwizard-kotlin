@@ -36,6 +36,8 @@ dependencies {
 
     implementation("com.google.inject:guice:4.2.0")
 
+    implementation("ru.vyarus:dropwizard-guicey:5.0.1")
+
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 
