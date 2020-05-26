@@ -3,16 +3,16 @@
  *
  * This generated file contains a sample Kotlin application project to get you started.
  */
-val dwVersion = "2.0.1"
+val dwVersion = "2.0.10"
 val junitVersion = "5.6.0"
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.3.61"
+    id("org.jetbrains.kotlin.jvm") version "1.3.70"
 
     // Apply the application plugin to add support for building a CLI application.
     application
-    id("org.flywaydb.flyway") version "6.2.2"
+    id("org.flywaydb.flyway") version "6.4.2"
     id("com.github.johnrengelman.shadow") version "5.2.0"
 
 }
