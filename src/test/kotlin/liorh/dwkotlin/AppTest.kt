@@ -1,7 +1,5 @@
 package liorh.dwkotlin
 
-import io.dropwizard.testing.ResourceHelpers
-import io.dropwizard.testing.junit.DropwizardAppRule
 import io.dropwizard.testing.junit5.DropwizardAppExtension
 import io.dropwizard.testing.junit5.DropwizardExtensionsSupport
 import org.junit.ClassRule
@@ -13,7 +11,7 @@ import kotlin.test.assertNotNull
 @ExtendWith(DropwizardExtensionsSupport::class)
 class AppTest {
     @ClassRule
-    val app = DropwizardAppExtension<AppConfig>(App::class.java)
+    val app = DropwizardAppExtension(App::class.java)
 
     @Test
     fun testAppisUp() {
