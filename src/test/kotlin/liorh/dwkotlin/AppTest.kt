@@ -14,7 +14,7 @@ class AppTest {
     val app = DropwizardAppExtension(App::class.java)
 
     @Test
-    fun testAppisUp() {
+    fun testAppIsUp() {
         assertNotNull(app.localPort)
     }
 }

@@ -1,15 +1,15 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val dwVersion = "2.0.10"
-val junitVersion = "5.6.0"
+val dwVersion = "2.0.14"
+val junitVersion = "5.7.0"
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.3.70"
+    id("org.jetbrains.kotlin.jvm") version "1.4.10"
 
     // Apply the application plugin to add support for building a CLI application.
     application
-    id("org.flywaydb.flyway") version "6.4.2"
+    id("org.flywaydb.flyway") version "7.1.1"
     id("com.github.johnrengelman.shadow") version "5.2.0"
 
 }
@@ -33,7 +33,7 @@ dependencies {
 
     implementation("com.google.inject:guice:4.2.0")
 
-    implementation("ru.vyarus:dropwizard-guicey:5.0.1")
+    implementation("ru.vyarus:dropwizard-guicey:5.1.0")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
@@ -44,7 +44,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:$junitVersion")
     testImplementation("com.nhaarman:mockito-kotlin:1.5.0")
     testImplementation("io.dropwizard:dropwizard-testing:$dwVersion")
-    testImplementation("io.rest-assured:rest-assured:3.1.0")
+    testImplementation("io.rest-assured:rest-assured:4.3.1")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
